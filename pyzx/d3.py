@@ -16,6 +16,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import json
+from os import path
 from fractions import Fraction
 
 __all__ = ['init', 'draw']
@@ -23,7 +24,7 @@ __all__ = ['init', 'draw']
 try:
     from IPython.display import display, HTML
     in_notebook = True
-    javascript_location = '../js'
+    javascript_location = path.join(path.dirname(__file__), "..", "js")
 except ImportError:
     in_notebook = False
     javascript_location = '/js'
