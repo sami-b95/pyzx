@@ -51,7 +51,7 @@ def phase_to_s(a, t):
     # unicode 0x03c0 = pi
     return ns + '\u03c0' + ds
 
-def draw(g, scale=None, auto_hbox=True, labels=False):
+def draw(g, scale=None, auto_hbox=True, labels=False, javascript_location=javascript_location):
     global _d3_display_seq
 
     if not in_notebook and not in_webpage: 
